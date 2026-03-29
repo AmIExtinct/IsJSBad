@@ -14,13 +14,15 @@ but.addEventListener("click", showRandom)
 let isDark = true
 function changeTheme(){
    if (isDark) {
-      themeBut.style.backgroundColor = "white"
-      themeBut.style.color = "black"
+      body.style.backgroundColor = "white"
+      body.style.color = "black"
+      isDark = false
       return
    }
    
-   themeBut.style.backgroundColor = "black"
-   themeBut.style.color = 'aquamarine'
+   body.style.backgroundColor = "black"
+   body.style.color = 'aquamarine'
+   isDark = true
 }
 
 
