@@ -16,12 +16,14 @@ function changeTheme(){
    if (isDark) {
       body.style.backgroundColor = "white"
       body.style.color = "black"
+      themeBut.textContent = "Dark?"
       isDark = false
       return
    }
    
    body.style.backgroundColor = "black"
    body.style.color = 'aquamarine'
+   themeBut.textContent = "Light?"
    isDark = true
 }
 
