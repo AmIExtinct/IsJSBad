@@ -4,7 +4,7 @@ let but = document.getElementById('randomButton')
 function cleanUpDammit(){
    setTimeout(() => {
       window.removeEventListener('DOMContentLoaded', lameIntro)
-   }, 10);
+   }, 200);
 }
 
 function showRandom(){
@@ -28,5 +28,4 @@ function lameIntro(){
 }
 
 window.addEventListener('DOMContentLoaded', lameIntro);
-
 
