@@ -1,0 +1,22 @@
+#randomButton{
+   background-color: darkgrey;
+   font-weight: 500;
+   font-size: 13px;
+   display: inline;
+
+   border-style: groove;
+   border-radius: 150ch;
+   border-width: 12px;
+   border-color: rgb(200, 200, 200);
+}
+#randomButton:hover{
+   background-color: dimgray;
+   font-weight: 800;
+   font-size: 15px;
+   display: inline;
+
+   border-style: double;
+   border-radius: 200ch;
+   border-width: 15px;
+   border-color: rgba(200, 200, 200, 0.1);
+}
