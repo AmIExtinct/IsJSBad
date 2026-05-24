@@ -182,6 +182,25 @@
                 generateAndCopy();
             }
         });
+       // ── Global keyboard shortcuts ──
+       document.addEventListener('keydown', function handleGlobalShortcut(e) {
+          // Ignore if user is inside a textarea or contenteditable (safety, none exist here)
+          if (e.target.isContentEditable || e.target.tagName === 'TEXTAREA') return;
+
+          // '/' → focus & select the length input
+          if (e.key === '/' && !e.ctrlKey && !e.metaKey && !e.altKey) {
+             e.preventDefault();
+             lengthInput.focus();
+             lengthInput.select();
+             return;
+          }
+
+          // Space → generate (unless the Generate button itself is focused)
+          if (e.key === ' ' && document.activeElement !== generateBtn) {
+             e.preventDefault();
+             generateAndCopy();
+          }
+       });
     }
 
     // ── Initial generation on page load with default length ──
