@@ -1,0 +1,46 @@
+.glow-button {
+  position: relative;
+  background: linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, #0f3460 100%);
+  color: #e94560;
+  border: none;
+  padding: 16px 36px;
+  font-size: 1.3rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  cursor: pointer;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 0 20px #e94560aa, 0 0 40px #e9456066;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  z-index: 10;
+  margin: 30px;
+}
+
+/* Glow pulse on hover */
+.glow-button::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(233,69,96,0.3) 0%, transparent 70%);
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+.glow-button:hover::before {
+  opacity: 1;
+}
+
+.glow-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px #e94560, 0 0 60px #e94560;
+  color: #fff;
+}
+
+/* Click – press down effect */
+.glow-button:active {
+  transform: scale(0.96);
+  box-shadow: 0 0 10px #e94560;
+}
