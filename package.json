@@ -1,0 +1,36 @@
+{
+  "name": "isjsbad-site",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "build": "node scripts/build.cjs",
+    "lint:html": "htmlhint --ignore \"dist/**,node_modules/**,.parcel-cache/**\" \"**/*.{html,htm}\"",
+    "lint:css": "stylelint \"css/**/*.css\"",
+    "lint:js": "eslint \"js/**/*.js\" \"scripts/**/*.cjs\""
+  },
+  "devDependencies": {
+    "eslint": "^8.57.1",
+    "htmlhint": "^1.6.3",
+    "parcel": "^2.13.3",
+    "stylelint": "^17.16.0",
+    "stylelint-config-standard": "^40.0.0"
+  },
+  "eslintConfig": {
+    "env": {
+      "browser": true,
+      "es2021": true
+    },
+    "extends": "eslint:recommended",
+    "overrides": [
+      {
+        "files": ["scripts/**/*.cjs"],
+        "env": {
+          "node": true
+        }
+      }
+    ]
+  },
+  "stylelint": {
+    "extends": "stylelint-config-standard"
+  }
+}
